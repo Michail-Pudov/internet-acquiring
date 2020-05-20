@@ -46,20 +46,22 @@ class Card extends PureComponent {
           <div className='modal__close'>
             <img src="./Иконка_крестика_(ei).svg.png" alt="" style={{ width: '30px', height: '30px' }} onClick={this.openAndCloseModal} />
           </div>
-          <div className='modal__image'>
-            <img src={product.img} alt="" style={{ width: '100px', height: '150px' }} />
+          <div className='content__card__modal'>
+            <div className='modal__image'>
+              <img src={product.img} alt="" />
+            </div>
+            <div className='modal__content'>
+              <h4><i>{product.title}</i></h4>
+              <p><b>Цена: {product.price / 100}</b></p>
+              <p>{product.description}</p>
+              <div className='modal__purchase'>
+                {this.state.added ? <p>Товары добавлены в корзину</p> : <>
+                  <input type="number" min='1' max='5' name='count' onChange={this.onChange} className='input__number' />
+                  <button onClick={() => this.addGoods(product)} className='button__modal'>В корзину</button></>}
+              </div>
+              <p className='message'></p>
+            </div>
           </div>
-          <div className='modal__content'>
-            <h4><i>{product.title}</i></h4>
-            <p><b>Цена: {product.price / 100}</b></p>
-            <p>{product.description}</p>
-          </div>
-          <div className='modal__purchase'>
-            {this.state.added ? <p>Товары добавлены в корзину</p> : <>
-              <input type="number" min='1' max='5' name='count' onChange={this.onChange} className='input__number' />
-              <button onClick={() => this.addGoods(product)}>В корзину</button></>}
-          </div>
-          <p className='message'></p>
         </div>
       </div>
     )

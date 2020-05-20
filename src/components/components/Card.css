@@ -9,7 +9,9 @@
 }
 
 .card__product:hover{
-  box-shadow: 0 0 8px rgba(112, 111, 111, 0.5); /* Параметры тени */
+  box-shadow: 0 0 8px rgba(112, 111, 111, 0.5);
+  cursor: pointer;
+
 }
 
 .card__product img{
@@ -20,4 +22,19 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+.content__card__modal{
+  height: 130%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__image{
+  /* height: 130%; */
+  margin: 15px;
+}
+.modal__image img{
+  width: 200px;
+  height: 300px;
 }
