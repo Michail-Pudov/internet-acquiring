@@ -2,6 +2,8 @@
 `
  npm install
  `
+ 
+ 
  Для запуска приложения:
  `
 npm start
