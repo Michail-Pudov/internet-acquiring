@@ -29,6 +29,7 @@ class Showcase extends PureComponent {
   }
 
   render() {
+
     return (
       <div className='showcase'>
         {this.state.products.map((item, index) => {

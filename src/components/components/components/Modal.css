@@ -18,10 +18,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 666px;
-  height: 397px;
+  width: 60%;
+  height: 60%;
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   align-items: center;
 }
 .content {
